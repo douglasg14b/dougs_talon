@@ -1,14 +1,19 @@
-tag: user.javascript
+code.language: javascript
+code.language: typescript
+code.language: javascriptreact
+code.language: typescriptreact
 -
 tag(): user.code_imperative
 tag(): user.code_object_oriented
 
+tag(): user.code_block_c_like
 tag(): user.code_comment_line
 tag(): user.code_comment_block_c_like
 tag(): user.code_data_bool
 tag(): user.code_data_null
 tag(): user.code_functions
-tag(): user.code_functions_gui
+tag(): user.code_functions_common
+tag(): user.code_keywords
 tag(): user.code_libraries
 tag(): user.code_operators_array
 tag(): user.code_operators_assignment
@@ -26,6 +31,7 @@ settings():
 
 (op | is) strict equal: " === "
 (op | is) strict not equal: " !== "
+op null else: " ?? "
 
 state const: "const "
 
@@ -39,16 +45,13 @@ state async: "async "
 
 state await: "await "
 
-state map:
-    user.insert_between(".map(", ")")
+dot {user.code_common_member_function}:
+    user.insert_between(".{code_common_member_function}(", ")")
 
-state filter:
-    user.insert_between(".filter(", ")")
-
-state reduce:
-    user.insert_between(".reduce(", ")")
+state map: app.notify('ERROR: Command deprecated; please use "dot map"')
+state filter: app.notify('ERROR: Command deprecated; please use "dot filter"')
+state reduce: app.notify('ERROR: Command deprecated; please use "dot reduce"')
 
 state spread: "..."
 
-from import:
-    user.insert_between(' from  "', '"')
+from import: user.insert_between(' from  "', '"')
