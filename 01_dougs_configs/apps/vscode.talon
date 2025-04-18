@@ -46,3 +46,5 @@ add to export:
     # user.vscode_and_wait("editor.action.jumpToBracket")
 
 
+move up: user.vscode("editor.action.moveLinesUpAction")
+move down: user.vscode("editor.action.moveLinesDownAction")
