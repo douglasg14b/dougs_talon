@@ -1,11 +1,10 @@
-os: windows
 app: visual_studio
 -
 tag(): user.tabs
 tag(): user.line_commands
 tag(): user.find_and_replace
 tag(): user.multiple_cursors
-#multiple_cursor.py support end
+tag(): user.command_client
 
 # Panels
 panel solution: key(ctrl-alt-l)
@@ -34,7 +33,6 @@ file create: key(ctrl-n)
 #file open folder:
 file rename: key(ctrl-[ s f2)
 file reveal: key(ctrl-[ s)
-file close: key(ctrl-f4)
 
 # Language Features
 hint show: key(ctrl-shift-space)
